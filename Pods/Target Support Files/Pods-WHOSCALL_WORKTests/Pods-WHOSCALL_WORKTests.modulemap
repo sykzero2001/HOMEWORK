@@ -1,0 +1,6 @@
+framework module Pods_WHOSCALL_WORKTests {
+  umbrella header "Pods-WHOSCALL_WORKTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
