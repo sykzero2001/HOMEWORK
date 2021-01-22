@@ -43,6 +43,10 @@ class TopItemDisplayController: ParentListViewController {
         self.closePicker()
         self.mainTableView.register(UINib(nibName: TopItemCell.CellIdentifier, bundle: nil), forCellReuseIdentifier: TopItemCell.CellIdentifier)
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.mainTableView.reloadData()
+    }
 // MARK: 開關選單
     @IBAction func clickType(_ sender: UIButton) {
         self.openPicker()

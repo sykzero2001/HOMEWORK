@@ -35,6 +35,7 @@ class TopItemCell: UITableViewCell {
         endDate.text = data.endDate ?? ""
         let imageUrlString = URL.init(string: data.imageUrl ?? "")
         self.topImage.sd_setImage(with:imageUrlString, placeholderImage: UIImage(named: ""), options: .refreshCached, completed: nil)
+        self.theFavoriteButton.layer.cornerRadius = 10.0
         self.setFavoriteButton(data:data)
     }
     func setFavoriteButton(data:Top){
